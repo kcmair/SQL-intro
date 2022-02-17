@@ -1,4 +1,5 @@
-SELECT SUM(total) FROM invoice
+SELECT SUM(total), billing_state
+FROM invoice
 GROUP BY billing_state;
 
 SELECT AVG(milliseconds), album_id
@@ -8,5 +9,5 @@ ORDER BY 1;
 
 SELECT COUNT(*), artist_id
 FROM album
-WHERE artist_id IN (8, 22)
+WHERE artist_id in (8, 22)
 GROUP BY artist_id;
